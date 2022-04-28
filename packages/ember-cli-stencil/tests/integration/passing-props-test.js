@@ -4,7 +4,7 @@ import { click, find, render } from '@ember/test-helpers';
 import {
   getShadowRoot,
   waitUntilInShadowRoot
-} from 'ember-cli-stencil/test-support';
+} from '@jrrucker/ember-cli-stencil/test-support';
 import hbs from 'htmlbars-inline-precompile';
 import td from 'testdouble';
 

@@ -1,5 +1,5 @@
 {
-  "name": "ember-cli-stencil",
+  "name": "@jrrucker/ember-cli-stencil",
   "author": "Alex LaFroscia <alex@lafroscia.com>",
   "license": "MIT",
   "private": true,
@@ -9,7 +9,7 @@
   "scripts": {
     "lint": "lerna run lint",
     "pretest": "lerna run --scope demo-components build",
-    "test": "lerna run --scope ember-cli-stencil test"
+    "test": "lerna run --scope @jrrucker/ember-cli-stencil test"
   },
   "husky": {
     "hooks": {

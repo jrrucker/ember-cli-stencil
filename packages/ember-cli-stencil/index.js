@@ -52,9 +52,10 @@ module.exports = {
       parentDepsPackages = this.getParentDependencies()
         .map(dep => this.addonDiscovery.resolvePackage(this.parent.root, dep))
         .map(pathToDep => {
+          const pkg = pathToDep ? require(path.join(pathToDep, 'package.json')) : null;
           return {
             root: pathToDep,
-            pkg: require(path.join(pathToDep, 'package.json'))
+            pkg
           };
         });
     } else {
@@ -74,7 +75,7 @@ module.exports = {
     // Find all Stencil collections in the dependencies
     this.stencilCollections = parentDepsPackages.reduce(
       (acc, { root, pkg }) => {
-        if (StencilCollection.looksLike(pkg)) {
+        if (pkg && StencilCollection.looksLike(pkg)) {
           logDiscovery('found Stencil collection %o at %o', pkg.name, root);
           acc.push(new StencilCollection(pkg, root));
         }

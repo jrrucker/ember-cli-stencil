@@ -1,7 +1,7 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import { click, find, render } from '@ember/test-helpers';
-import { waitUntilInShadowRoot } from 'ember-cli-stencil/test-support';
+import { waitUntilInShadowRoot } from '@jrrucker/ember-cli-stencil/test-support';
 import hbs from 'htmlbars-inline-precompile';
 import td from 'testdouble';
 
